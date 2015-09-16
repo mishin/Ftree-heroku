@@ -19,7 +19,6 @@ requires 'Set::Scalar', '1.29';
 requires 'Spreadsheet::ParseExcel';
 requires 'version', '0.9912';
 
-
 requires 'Gedcom::Comparison', '1.15';
 requires 'Gedcom::Event', '1.15';
 requires 'Gedcom::Family', '1.15';
