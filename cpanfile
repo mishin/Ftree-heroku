@@ -38,7 +38,6 @@ requires 'Log::Log4perl', '1.46';
 requires 'Plack', '1.0037';
 requires 'CGI::Emulate::PSGI', '0.21';
 requires 'CGI::Compile', '0.19';
-requires 'Mojolicious', '2.98';
 
 on test => sub {
     requires 'Test::More';
