@@ -25,12 +25,12 @@ my $app2 = CGI::Emulate::PSGI->handler($sub_person);
 # use Plack::Builder;
 
   builder {
-      enable "Plack::Middleware::Static",
-          path => qr{[gif|png|jpg|swf|ico|mov|mp3|pdf|js|css]$}, root => './';
-      # $app;
-	  mount "/person_page" => $app2;
-	  mount "/ftree" => $app;
-	  enable "Static", path => qr!^/static!, root => './';
+      # enable "Plack::Middleware::Static",
+          # path => qr{[gif|png|jpg|swf|ico|mov|mp3|pdf|js|css]$}, root => './';
+      # # $app;
+	  # mount "/person_page" => $app2;
+	  # mount "/ftree" => $app;
+	  enable "Static", path => qr!^/static!, root => '/';
 	  mount "/" => builder { $app };
   }; 
 # $app is a PSGI application
