@@ -24,6 +24,10 @@ my $app2 = CGI::Emulate::PSGI->handler($sub_person);
 # };
  
 # use Plack::Builder;
+my $app3 = sub { 
+    return [ 200, [], [ "google-site-verification: google1eb121720d825b8d.html" ] ];
+};
+
 
   builder {
       enable "Plack::Middleware::Static",
@@ -31,6 +35,7 @@ my $app2 = CGI::Emulate::PSGI->handler($sub_person);
       # $app;
 	  mount "/person_page" => $app2;
 	  mount "/ftree" => $app;
+	  mount "/google1eb121720d825b8d.html" => $app3;
 	  # enable "Static", path => qr!^/static!, root => '/';
 	  mount "/" => builder { $app };
 	   # mount "/" => $html;
