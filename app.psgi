@@ -16,7 +16,8 @@ my $sub_person = CGI::Compile->compile($cgi_person);
 my $app2 = CGI::Emulate::PSGI->handler($sub_person);
  
  use Plack::Builder;
-
+ use Plack::App::File;
+ my $html   = Plack::App::File->new(root => "/");
 # builder {
     # mount "/static" => Plack::App::File->new(root => "./");
     # mount "/" => $app;
@@ -30,8 +31,9 @@ my $app2 = CGI::Emulate::PSGI->handler($sub_person);
       # # $app;
 	  # mount "/person_page" => $app2;
 	  # mount "/ftree" => $app;
-	  enable "Static", path => qr!^/static!, root => '/';
-	  mount "/" => builder { $app };
+	  # enable "Static", path => qr!^/static!, root => '/';
+	  # mount "/" => builder { $app };
+	   mount "/" => $html;
   }; 
 # $app is a PSGI application
 # use CGI qw(param);
