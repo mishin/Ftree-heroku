@@ -18,4 +18,5 @@ sub locate_file
 
     return $self->SUPER::locate_file( $env ) unless $path && $path =~ m{/$};
     $env->{PATH_INFO} .= 'google1eb121720d825b8d.html';
-    retur
+    return $self->SUPER::locate_file( $env );
+}
