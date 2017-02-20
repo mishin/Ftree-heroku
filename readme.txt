@@ -6,4 +6,4 @@ https://still-lowlands-7377.herokuapp.com/ftree?type=tree;target=Abraham_Simpson
 
 сама программа на cpan (https://metacpan.org/release/MISHIN/FamilyTreeInfo-2.3.20)
 точнее адаптировал уже готовую к широкому использованию.
-1. Залил все на облачный сервис heroku !! (сегодня)
+1. Залил все на облачный сервис heroku !! (сегодня) 
